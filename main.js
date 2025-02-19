@@ -1,4 +1,4 @@
-// Preloader animation
+// Preloader Animation
 window.addEventListener('load', () => {
     const preloader = document.getElementById('preloader');
     preloader.style.display = 'none';
