@@ -93,7 +93,7 @@ header .btn-main {
     font-size: 1.2em;
     text-transform: uppercase;
     border-radius: 50px;
-    margin-top: 40px;
+    margin-top: 1.5em !important;
     transition: background 0.3s ease;
 }
 
