@@ -1,25 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ne">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flit</title>
-    <!-- stylesheet -->
-<link rel="stylesheet" href="style.css">
-
+    <meta name="description" content="Er. Dolendra Sharma - CEO, Electronics Engineer, Tech Leader in Nepal.">
+    <meta name="keywords" content="Dolendra Sharma, Electronics Engineer, CEO, Tech Leader, Portfolio, Web Development, Laravel">
+    <title>Er. Dolendra Sharma - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mongoose&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
 
-    <!--@@@@@@@@@@@@@@@@@@@@@@@ Header Section @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-        <header>
-            <h1>Navigation Menu</h1>
-            
-        </header>
-      <!--@@@@@@@@@@@@@@@@@@@@@@@ / Header Section @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-    
+    <header id="home">
+        <div class="container">
+            <div class="header-content">
+                <h1>Er. Dolendra Sharma</h1>
+                <p>CEO | Electronics Engineer | Tech Leader in Nepal</p>
+                <a href="#about" class="btn-main">Learn More</a>
+            </div>
+        </div>
+    </header>
 
-<!-- Scripts-->
-<script src="main.js"></script>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am an Electronics Engineer and a passionate tech leader dedicated to building innovative solutions for Nepal's future. I have experience leading tech projects and building digital platforms that impact real-world change.</p>
+            <img src="https://via.placeholder.com/400" alt="Profile Picture" class="about-img">
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding bg-light">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="skills-list">
+                <div class="skill">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Laravel</h3>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-code"></i>
+                    <h3>PHP & JS</h3>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>UI/UX Design</h3>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-server"></i>
+                    <h3>Backend Architecture</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project">
+                    <img src="https://via.placeholder.com/300" alt="Project 1">
+                    <h3>AMG Website</h3>
+                    <p>Developed a fully-responsive, client-specific website for AMG, integrating custom design elements and user functionality.</p>
+                    <a href="#" class="btn-main">View Project</a>
+                </div>
+                <div class="project">
+                    <img src="https://via.placeholder.com/300" alt="Project 2">
+                    <h3>Pet Parent Resource</h3>
+                    <p>A platform to offer valuable resources and tips for pet owners, built with a clean design and intuitive navigation.</p>
+                    <a href="#" class="btn-main">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-light">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form id="contact-form" action="mailto:your-email@example.com" method="POST" enctype="text/plain">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn-main">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Er. Dolendra Sharma. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
