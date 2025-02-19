@@ -75,6 +75,9 @@ header p {
     font-size: 1.3em;
     margin: 10px 0;
 }
+header a {
+    margin-top: 1em; 
+}
 
 @keyframes fadeIn {
     from {
