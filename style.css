@@ -75,9 +75,6 @@ header p {
     font-size: 1.3em;
     margin: 10px 0;
 }
-header a {
-    margin-top: 1em; 
-}
 
 @keyframes fadeIn {
     from {
@@ -96,7 +93,7 @@ header .btn-main {
     font-size: 1.2em;
     text-transform: uppercase;
     border-radius: 50px;
-    margin-top: 20px;
+    margin-top: 40px;
     transition: background 0.3s ease;
 }
 
