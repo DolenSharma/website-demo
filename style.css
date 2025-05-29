@@ -57,7 +57,7 @@ a {
 
 /* Header */
 header {
-    background: #333;
+    background: #0A552F; /* avocado-dark */
     color: #fff;
     padding: 100px 0;
     text-align: center;
@@ -87,7 +87,7 @@ header p {
 }
 
 header .btn-main {
-    background: #ff6347;
+    background: #7553A2; /* avocado-primary */
     color: #fff;
     padding: 15px 30px;
     font-size: 1.2em;
@@ -98,12 +98,12 @@ header .btn-main {
 }
 
 header .btn-main:hover {
-    background: #e55347;
+    background: #3BB44A; /* avocado-secondary */
 }
 
 /* Navigation */
 nav {
-    background: #222;
+    background: #0A552F; /* avocado-dark */
     position: sticky;
     top: 0;
     width: 100%;
@@ -131,7 +131,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ff6347;
+    color: #3BB44A; /* avocado-secondary */
 }
 
 /* Section Styling */
@@ -172,7 +172,7 @@ nav ul li a:hover {
 
 .skill i {
     font-size: 3em;
-    color: #ff6347;
+    color: #7553A2; /* avocado-primary */
     margin-bottom: 20px;
 }
 
@@ -244,11 +244,11 @@ nav ul li a:hover {
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: #ff6347;
+    border-color: #7553A2; /* avocado-primary */
 }
 
 footer {
-    background: #333;
+    background: #0A552F; /* avocado-dark */
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -260,7 +260,7 @@ footer .social-links {
 }
 
 footer .social-btn {
-    background: #ff6347;
+    background: #7553A2; /* avocado-primary */
     color: #fff;
     padding: 10px 30px;
     margin: 10px;
@@ -271,5 +271,5 @@ footer .social-btn {
 }
 
 footer .social-btn:hover {
-    background: #e55347;
+    background: #3BB44A; /* avocado-secondary */
 }
