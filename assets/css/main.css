@@ -2,44 +2,41 @@
 # Font & Color Variables (Updated to Avocado Brand)
 --------------------------------------------------------------*/
 
-/* Fonts */
 :root {
   --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway", sans-serif;
   --nav-font: "Poppins", sans-serif;
+
+  /* Global Colors */
+  --background-color: #ffffff;
+  --default-color: #272829;
+  --heading-color: #0A552F;
+  --accent-color: #7553A2;
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+
+  /* Nav Menu */
+  --nav-color: #a8a9b4;
+  --nav-hover-color: #3BB44A;
+  --nav-mobile-background-color: #0A552F;
+  --nav-dropdown-background-color: #0A552F;
+  --nav-dropdown-color: #a8a9b4;
+  --nav-dropdown-hover-color: #3BB44A;
+
+  scroll-behavior: smooth;
 }
 
-/* Global Colors - Avocado Brand */
-:root { 
-  --background-color: #ffffff;             /* Background remains white */
-  --default-color: #272829;                /* Text default */
-  --heading-color: #0A552F;                /* avocado-dark */
-  --accent-color: #7553A2;                 /* avocado-primary */
-  --surface-color: #ffffff;                /* Card backgrounds */
-  --contrast-color: #ffffff;               /* Contrast text (e.g., on buttons) */
-}
-
-/* Nav Menu Colors */
-:root {
-  --nav-color: #a8a9b4;                    /* Default nav link color */
-  --nav-hover-color: #3BB44A;              /* avocado-secondary on hover */
-  --nav-mobile-background-color: #0A552F;  /* avocado-dark */
-  --nav-dropdown-background-color: #0A552F;/* avocado-dark */
-  --nav-dropdown-color: #a8a9b4;           /* Dropdown links */
-  --nav-dropdown-hover-color: #3BB44A;     /* avocado-secondary hover */
-}
-
-/* Color Presets */
+/* Light & Dark Presets */
 .light-background {
   --background-color: #f4fafd;
   --surface-color: #ffffff;
 }
 
 .dark-background {
-  --background-color: #0A552F;             /* avocado-dark */
+  --background-color: #0A552F;
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --surface-color: #134030;                /* slightly lighter than dark */
+  --surface-color: #134030;
   --contrast-color: #ffffff;
 }
 
