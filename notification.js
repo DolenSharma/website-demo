@@ -6,15 +6,21 @@ document.addEventListener("DOMContentLoaded", function () {
     <div class="notification-content">
       <p><strong>मेरो Web App हेर्नुहोस् | View My Web App</strong></p>
       <button id="view-demo">Visit Demo</button>
+      <button id="dismiss-notification">Not Now</button>
     </div>
   `;
 
   // Append to body
   document.body.appendChild(notification);
 
-  // Redirect on click
+  // Redirect on "Visit Demo"
   document.getElementById("view-demo").addEventListener("click", function () {
-    window.location.href = "https://your-demo-link.com"; // Replace this with your real demo link
+    window.location.href = "https://github.com/DolenSharma/infotech-hrms-2023"; // Replace with real link
+  });
+
+  // Dismiss notification on "Not Now"
+  document.getElementById("dismiss-notification").addEventListener("click", function () {
+    notification.style.display = "none";
   });
 });
 
@@ -45,7 +51,7 @@ style.innerHTML = `
     padding: 6px 14px;
     border-radius: 6px;
     cursor: pointer;
-    margin-top: 12px;
+    margin: 8px 6px 0;
     font-weight: bold;
     transition: background 0.3s;
   }
