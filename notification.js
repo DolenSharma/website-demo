@@ -1,4 +1,3 @@
-<script>
 document.addEventListener("DOMContentLoaded", function () {
   // Create the notification container
   let notification = document.createElement("div");
@@ -56,4 +55,3 @@ style.innerHTML = `
   }
 `;
 document.head.appendChild(style);
-</script>
