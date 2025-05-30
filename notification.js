@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Redirect on "Visit Demo"
   document.getElementById("view-demo").addEventListener("click", function () {
-    window.location.href = "https://github.com/DolenSharma/infotech-hrms-2023"; // Replace with real link
+    window.location.href = "/launchingsoon.html"; // Replace with real link
   });
 
   // Dismiss notification on "Not Now"
