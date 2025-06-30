@@ -16,53 +16,60 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Hero Animation
-const canvas = document.getElementById('orbitCanvas');
-const ctx = canvas.getContext('2d');
+const planets = [
+      { name: "Mercury", radius: 40, speed: 0.04, size: 4, color: "gray" },
+      { name: "Venus", radius: 60, speed: 0.03, size: 5, color: "goldenrod" },
+      { name: "Earth", radius: 80, speed: 0.02, size: 6, color: "deepskyblue" },
+      { name: "Mars", radius: 100, speed: 0.018, size: 5, color: "orangered" },
+      { name: "Jupiter", radius: 130, speed: 0.015, size: 10, color: "saddlebrown" },
+      { name: "Saturn", radius: 160, speed: 0.012, size: 9, color: "khaki" },
+      { name: "Uranus", radius: 190, speed: 0.01, size: 8, color: "lightblue" },
+      { name: "Neptune", radius: 220, speed: 0.008, size: 8, color: "dodgerblue" },
+      { name: "Pluto", radius: 250, speed: 0.006, size: 3, color: "white" }
+    ];
 
-const width = canvas.width;
-const height = canvas.height;
+    const container = document.getElementById("kepler-animation");
 
-// Sun position (focus of the ellipse)
-const sunX = width / 2 - 80;
-const sunY = height / 2;
+    planets.forEach(p => {
+      const planet = document.createElement("div");
+      planet.classList.add("planet");
+      planet.style.width = `${p.size}px`;
+      planet.style.height = `${p.size}px`;
+      planet.style.background = p.color;
+      planet.style.borderRadius = "50%";
+      planet.style.position = "absolute";
+      planet.dataset.radius = p.radius;
+      planet.dataset.angle = Math.random() * Math.PI * 2;
+      planet.dataset.speed = p.speed;
+      container.appendChild(planet);
+    });
 
-// Orbit parameters (ellipse)
-const a = 180; // semi-major axis
-const b = 100; // semi-minor axis
+    function animate() {
+      const planets = document.querySelectorAll(".planet");
+      planets.forEach(p => {
+        let r = parseFloat(p.dataset.radius);
+        let a = parseFloat(p.dataset.angle);
+        let s = parseFloat(p.dataset.speed);
+        a += s;
+        let x = Math.cos(a) * r + window.innerWidth / 2;
+        let y = Math.sin(a) * r + window.innerHeight / 2;
+        p.style.left = `${x}px`;
+        p.style.top = `${y}px`;
+        p.dataset.angle = a;
+      });
+      requestAnimationFrame(animate);
+    }
 
-let angle = 0;
+    animate();
 
-function drawOrbit() {
-  ctx.clearRect(0, 0, width, height);
-
-  // Draw ellipse (orbit path)
-  ctx.beginPath();
-  ctx.ellipse(sunX + 80, sunY, a, b, 0, 0, 2 * Math.PI);
-  ctx.strokeStyle = "#444";
-  ctx.lineWidth = 1;
-  ctx.stroke();
-
-  // Draw sun
-  ctx.beginPath();
-  ctx.arc(sunX, sunY, 10, 0, 2 * Math.PI);
-  ctx.fillStyle = "yellow";
-  ctx.fill();
-
-  // Calculate planet position on ellipse
-  const x = sunX + 80 + a * Math.cos(angle);
-  const y = sunY + b * Math.sin(angle);
-
-  // Draw planet
-  ctx.beginPath();
-  ctx.arc(x, y, 6, 0, 2 * Math.PI);
-  ctx.fillStyle = "deepskyblue";
-  ctx.fill();
-
-  // Speed varies: closer to sun = faster (Kepler's 2nd law)
-  const distance = Math.hypot(x - sunX, y - sunY);
-  angle += 0.008 + (0.3 / distance);
-
-  requestAnimationFrame(drawOrbit);
-}
-
-drawOrbit();
+// Starfield background
+    const canvas = document.getElementById("stars");
+    const ctx = canvas.getContext("2d");
+    for (let i = 0; i < 200; i++) {
+      ctx.fillStyle = "white";
+      ctx.beginPath();
+      let x = Math.random() * canvas.width;
+      let y = Math.random() * canvas.height;
+      ctx.arc(x, y, Math.random() * 1.5, 0, Math.PI * 2);
+      ctx.fill();
+    }
