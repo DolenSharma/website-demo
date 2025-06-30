@@ -99,8 +99,15 @@
               background: rgba(0, 0, 0, 0.5); z-index: 2;"></div>
 
   <!-- Hero Content -->
-  <div id="kepler-animation" style="width: 100%; height: 400px; background: #000; position: relative; overflow: hidden;">
-  <canvas id="orbitCanvas" width="600" height="400" style="display: block; margin: auto;"></canvas>
+<div id="kepler-animation" style="position: relative; width: 100vw; height: 100vh; background: black; overflow: hidden;">
+  <!-- Stars -->
+  <div style="position: absolute; inset: 0;">
+    <!-- Random star points -->
+    <canvas id="stars" width="1920" height="1080" style="width:100%; height:100%;"></canvas>
+  </div>
+
+  <!-- Sun -->
+  <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 20px; height: 20px; background: yellow; border-radius: 50%; z-index: 10;"></div>
 </div>
 
 <!--   <div class="container" data-aos="fade-up" data-aos-delay="100"
